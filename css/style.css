@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+.container {
+  width: 500px;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.weather-container {
+  padding: 1.8rem;
+  background-color: #78c2ad;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.weather-container h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.7rem;
+  letter-spacing: 1px;
+}
+
+.weather-container .weathers {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin: 1.2rem 0 1.4rem;
+}
+
+.weather-container .weathers .weather {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #5a5a5a;
+  border-bottom: 1px solid #ddd;
+}
+
+.weather-container .btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: 0.3s linear;
+}
+
+.weather-container .btn:hover {
+  background-color: rgb(94, 182, 157);
+}
+
+.changeLocation {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.changeLocation.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.changeLocation .outside-box {
+  margin-top: 3rem;
+  width: 500px;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.changeLocation .inside-box {
+  padding: 1.8rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.changeLocation .inside-box.style {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.changeLocation .inside-box .top-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.changeLocation .inside-box .top-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.changeLocation .inside-box .top-box .btn {
+  font-size: 18px;
+  color: #222;
+  cursor: pointer;
+}
+
+.changeLocation .inside-box form .input-box {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.changeLocation .inside-box form .input-box label {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.changeLocation .inside-box form .input-box input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.changeLocation .inside-box form .btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.changeLocation .inside-box form .btns button {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.changeLocation .inside-box form .btns button.close-btn {
+  background-color: #ef7478;
+}
+
+.changeLocation .inside-box form .btns button.change-btn {
+  background-color: #5eb69d;
+  margin-left: 1rem;
+}

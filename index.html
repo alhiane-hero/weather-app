@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="weather-container">
+            <div class="weatherBox"></div>
+            <a href="#" class="btn changeLocationBtn">Change Location</a>
+        </div>
+    </div>
+
+    <div class="changeLocation">
+        <div class="outside-box">
+            <div class="inside-box">
+                <div class="top-box">
+                    <h3>Choose Location</h3>
+                    <div class="btn closeChangeLocationBtn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <form action="#">
+                    <div class="input-box">
+                        <label for="termInput">City</label>
+                        <input type="text" id="termInput">
+                    </div>
+                    <div class="btns">
+                        <button class="btn close-btn" id="close-btn">Close</button>
+                        <button class="btn change-btn" id="change-btn">Save Change</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
